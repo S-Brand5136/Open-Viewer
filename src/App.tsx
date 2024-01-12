@@ -6,7 +6,6 @@ function App() {
     <Box height={"100vh"} w={"100vw"}>
       <OpenViewer
         camera_controls
-        playInteractAnimation
         model_url='./models/toaster.glb'
       />
     </Box>
