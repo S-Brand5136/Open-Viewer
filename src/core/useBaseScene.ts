@@ -2,8 +2,8 @@ import { Group, Object3D } from "three";
 import { create } from "zustand";
 
 type frameloop = "always" | "demand" | "never" | undefined;
-type sceneEleType = HTMLCanvasElement | null;
-type modelRefType = Object3D | Group | null;
+export type sceneEleType = HTMLCanvasElement | null;
+export type modelRefType = Object3D | Group | null;
 
 interface BaseContextState {
   model_url: string | null;
