@@ -6,25 +6,25 @@ import {
 } from "@react-three/drei";
 import UserModel from "./UserModel";
 import BaseScene from "./BaseScene";
-import Controls from "./Controls";
+import BaseControls from "./BaseControls.tsx";
+import {useBaseScene} from "./useBaseScene.ts";
 
 type Props = {
   model_url: string;
   camera_controls?: boolean;
-  camera_orbit?: string;
+  camera_orbit?: boolean;
   disable_zoom?: boolean;
   min_zoom?: number;
   max_zoom?: number;
   skybox?: string | Array<string>;
   bgColor?: string;
-  playInteractAnimation?: boolean;
   initialCameraPosition?: [number, number, number];
 };
 
 function OpenViewer({
   model_url,
   camera_controls,
-  playInteractAnimation,
+  camera_orbit,
   bgColor,
   skybox,
   initialCameraPosition = [5, 2, 1],
@@ -32,14 +32,18 @@ function OpenViewer({
   min_zoom,
   max_zoom,
 }: Props) {
+  const { modelRef, sceneEle } = useBaseScene();
+
   return (
     <BaseScene>
       {camera_controls && (
-        <Controls
-          useAnimation={playInteractAnimation}
+        <BaseControls
+          model={modelRef}
+          sceneCanvas={sceneEle}
           disableZoom={disable_zoom}
           minZoom={min_zoom}
           maxZoom={max_zoom}
+          cameraOrbit={camera_orbit}
         />
       )}
       {bgColor && !skybox && <color attach='background' args={[bgColor]} />}
