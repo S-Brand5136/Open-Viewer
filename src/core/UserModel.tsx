@@ -1,4 +1,4 @@
-import { useGLTF } from "@react-three/drei";
+import { Clone, useGLTF } from "@react-three/drei";
 import { GroupProps } from "@react-three/fiber";
 import { useBaseScene } from ".";
 import { useEffect, useRef } from "react";
@@ -26,7 +26,7 @@ export default function UserModel({ model_url, props }: Props) {
 
   return (
     <group ref={ref} {...props} dispose={null}>
-      <primitive object={scene} />
+      <Clone object={scene} />
     </group>
   );
 }
