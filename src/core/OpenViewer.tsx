@@ -7,7 +7,7 @@ import {
 import UserModel from "./UserModel";
 import BaseScene from "./BaseScene";
 import BaseControls from "./BaseControls.tsx";
-import {useBaseScene} from "./useBaseScene.ts";
+import { useBaseScene } from "./useBaseScene.ts";
 
 type Props = {
   model_url: string;
@@ -75,4 +75,4 @@ function OpenViewer({
   );
 }
 
-export default OpenViewer;
+export { OpenViewer };
