@@ -1,14 +1,14 @@
 import { CameraControls } from "@react-three/drei";
 import { useCallback, useEffect, useRef } from "react";
-import { OrthographicCamera, PerspectiveCamera} from "three";
+import { OrthographicCamera, PerspectiveCamera } from "three";
 import * as THREE from "three";
 import { DEG2RAD } from "three/src/math/MathUtils.js";
-import {useFrame} from "@react-three/fiber";
-import {modelRefType, sceneEleType} from "./useBaseScene.ts";
+import { useFrame } from "@react-three/fiber";
+import { modelRefType, sceneEleType } from "./useBaseScene.ts";
 
 type CameraControlsProps = {
   model: modelRefType;
-  sceneCanvas: sceneEleType,
+  sceneCanvas: sceneEleType;
   camera?: PerspectiveCamera | OrthographicCamera;
   domElement?: HTMLElement;
   cameraOrbit?: boolean;
@@ -61,6 +61,7 @@ export default function BaseControls({
     if (controlsRef.current) {
       sceneCanvas?.addEventListener("dblclick", recenterModel);
       sceneCanvas?.addEventListener("mouseup", refocusModel);
+
       controlsRef.current.addEventListener("controlstart", () => {
         userDragging.current = true;
       });
@@ -80,11 +81,11 @@ export default function BaseControls({
   }, [controlsRef, sceneCanvas, recenterModel, refocusModel]);
 
   useFrame(() => {
-    if(cameraOrbit && controlsRef?.current && !userDragging.current) {
+    if (cameraOrbit && controlsRef?.current && !userDragging.current) {
       const camera = controlsRef.current;
-      camera.rotate(0.5 * DEG2RAD , 0, true) ;
+      camera.rotate(0.5 * DEG2RAD, 0, true);
     }
-  })
+  });
 
   return (
     <CameraControls
