@@ -31,12 +31,16 @@ const BaseScene = ({ children }: Props) => {
       onMouseEnter={() => {
         document.body.style.cursor = "grab";
       }}
+      onMouseLeave={() => {
+        document.body.style.cursor = "auto";
+      }}
       onMouseDown={() => {
         document.body.style.cursor = "grabbing";
       }}
       onMouseUp={() => {
         document.body.style.cursor = "grab";
       }}
+      data-testid='canvas-container'
     >
       {children}
     </Canvas>
