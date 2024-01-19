@@ -4,6 +4,7 @@ import "./openviewer.css";
 type Props = {
   model_url: string;
   camera_controls?: boolean;
+  camera_orbit_speed?: number;
   camera_orbit?: boolean;
   disable_zoom?: boolean;
   min_zoom?: number;
@@ -17,6 +18,7 @@ export default function Test({
   model_url,
   camera_controls,
   camera_orbit,
+  camera_orbit_speed,
   disable_zoom,
   min_zoom,
   max_zoom,
@@ -29,6 +31,7 @@ export default function Test({
       <OpenView
         camera_controls={camera_controls}
         camera_orbit={camera_orbit}
+        camera_orbit_speed={camera_orbit_speed}
         disable_zoom={disable_zoom}
         min_zoom={min_zoom}
         max_zoom={max_zoom}

@@ -3,7 +3,7 @@ import { expect, userEvent, waitFor, within } from "@storybook/test";
 import OpenViewer from "./OpenViewer";
 
 const meta = {
-  title: "OpenViewer/OpenViewer",
+  title: "Staging/OpenViewer",
   component: OpenViewer,
   parameters: {
     layout: "fullscreen",
@@ -24,6 +24,11 @@ const meta = {
       control: "boolean",
       defaultValue: false,
       description: "Enable camera to orbit around model",
+    },
+    camera_orbit_speed: {
+      control: "number",
+      defaultValue: 0.1,
+      description: "Speed of camera orbit",
     },
     disable_zoom: {
       control: "boolean",
@@ -87,6 +92,10 @@ export const Advanced: Story = {
   args: {
     model_url: "./models/toaster.glb",
     camera_controls: true,
+    camera_orbit: true,
+    camera_orbit_speed: 0.1,
+    skybox: "./envMaps/leibstadt_1k.hdr",
+    initialCameraPosition: [5, 5, 5],
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);

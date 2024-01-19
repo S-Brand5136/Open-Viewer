@@ -6,10 +6,10 @@ import { Group } from "three";
 
 type Props = {
   model_url: string;
-  props: GroupProps;
+  props?: GroupProps;
 };
 
-export default function UserModel({ model_url, props }: Props) {
+export default function Model({ model_url, props }: Props) {
   const { scene } = useGLTF(model_url);
   const { setModelRef } = useBaseScene();
   const ref = useRef<Group | null>(null);
