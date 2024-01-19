@@ -12,6 +12,7 @@ type CameraControlsProps = {
   camera?: PerspectiveCamera | OrthographicCamera;
   domElement?: HTMLElement;
   cameraOrbit?: boolean;
+  cameraOrbitSpeed?: number;
   makeDefault?: boolean;
   disableZoom?: boolean;
   minZoom?: number;
@@ -21,11 +22,12 @@ type CameraControlsProps = {
   onChange?: (e?: { type: "update" }) => void;
 };
 
-export default function BaseControls({
+function BaseControls({
   camera,
   sceneCanvas,
   model,
   cameraOrbit,
+  cameraOrbitSpeed = 0.1,
   domElement,
   makeDefault,
   disableZoom = false,
@@ -83,7 +85,7 @@ export default function BaseControls({
   useFrame(() => {
     if (cameraOrbit && controlsRef?.current && !userDragging.current) {
       const camera = controlsRef.current;
-      camera.rotate(0.5 * DEG2RAD, 0, true);
+      camera.rotate(cameraOrbitSpeed * DEG2RAD, 0, true);
     }
   });
 
@@ -101,3 +103,5 @@ export default function BaseControls({
     />
   );
 }
+
+export { BaseControls };

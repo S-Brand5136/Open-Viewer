@@ -4,4 +4,4 @@ interface ControlsState {}
 
 const useControls = create<ControlsState>()(() => ({}));
 
-export default useControls;
+export { useControls };

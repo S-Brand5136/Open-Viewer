@@ -47,4 +47,4 @@ const BaseScene = ({ children }: Props) => {
   );
 };
 
-export default BaseScene;
+export { BaseScene };
