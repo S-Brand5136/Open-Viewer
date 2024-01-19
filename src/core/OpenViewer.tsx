@@ -7,7 +7,7 @@ import {
 } from "@react-three/drei";
 import Model from "./Model.tsx";
 import { BaseScene } from "./BaseScene";
-import { BaseControls } from "./BaseControls.tsx";
+import { Controls } from "./Controls.tsx";
 import { useBaseScene } from "./useBaseScene.ts";
 import { Suspense } from "react";
 
@@ -44,7 +44,7 @@ function OpenViewer({
       <BaseScene>
         <Suspense fallback={null}>
           {camera_controls && (
-            <BaseControls
+            <Controls
               model={modelRef}
               sceneCanvas={sceneEle}
               disableZoom={disable_zoom}

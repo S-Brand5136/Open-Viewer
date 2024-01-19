@@ -2,7 +2,7 @@
 export * from "./OpenViewer";
 
 // Controls
-export * from "./BaseControls";
+export * from "./Controls";
 
 // Base Components
 export * from "./BaseScene";

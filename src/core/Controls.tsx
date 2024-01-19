@@ -22,7 +22,7 @@ type CameraControlsProps = {
   onChange?: (e?: { type: "update" }) => void;
 };
 
-function BaseControls({
+function Controls({
   camera,
   sceneCanvas,
   model,
@@ -104,4 +104,4 @@ function BaseControls({
   );
 }
 
-export { BaseControls };
+export { Controls };
