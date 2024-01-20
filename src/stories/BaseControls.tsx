@@ -1,6 +1,5 @@
 import { Stage } from "@react-three/drei";
-import { BaseScene, Controls as Controls, useBaseScene } from "../core";
-import Model from "../core/Model";
+import { Model, BaseScene, Controls as Controls, useBaseScene } from "../core";
 import "./basecontrols.css";
 
 type Props = {

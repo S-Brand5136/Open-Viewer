@@ -14,6 +14,9 @@ interface BaseContextState {
   onCreated: () => void;
   setSceneRef: (sceneEle: sceneEleType) => void;
   setModelRef: (modelRef: modelRefType) => void;
+  setModelUrl: (model_url: string) => void;
+  setFrameloop: (frameloop: frameloop) => void;
+  setFlat: (flat: boolean) => void;
 }
 
 const useBaseScene = create<BaseContextState>()((set) => ({

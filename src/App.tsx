@@ -1,5 +1,5 @@
 import { Stage } from "@react-three/drei";
-import Model from "./core/Model";
+import { Model } from "./core/Model";
 import { Controls, BaseScene, useBaseScene } from "./web";
 
 function App() {

@@ -13,8 +13,8 @@ const meta = {
       control: {
         type: "text",
         defaultValue: "./models/toaster.glb",
-        description: "URL of the model to load",
       },
+      description: "URL of the model to load",
     },
   },
 } satisfies Meta<typeof Controls>;

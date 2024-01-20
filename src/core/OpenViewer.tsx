@@ -5,7 +5,7 @@ import {
   PerspectiveCamera,
   Stage,
 } from "@react-three/drei";
-import Model from "./Model.tsx";
+import { Model } from "./Model.tsx";
 import { BaseScene } from "./BaseScene";
 import { Controls } from "./Controls.tsx";
 import { useBaseScene } from "./useBaseScene.ts";

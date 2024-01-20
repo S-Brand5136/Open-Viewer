@@ -9,7 +9,7 @@ type Props = {
   props?: GroupProps;
 };
 
-export default function Model({ model_url, props }: Props) {
+function Model({ model_url, props }: Props) {
   const { scene } = useGLTF(model_url);
   const { setModelRef } = useBaseScene();
   const ref = useRef<Group | null>(null);
@@ -30,3 +30,5 @@ export default function Model({ model_url, props }: Props) {
     </group>
   );
 }
+
+export { Model };

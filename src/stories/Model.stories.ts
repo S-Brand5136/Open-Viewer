@@ -8,12 +8,30 @@ const meta = {
     layout: "fullscreen",
   },
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    model_url: {
+      control: {
+        type: "text",
+        defaultValue: "./models/toaster.glb",
+      },
+      description: "URL of the model to load.",
+    },
+    groupProps: {
+      control: {
+        type: "object",
+        defaultValue: {},
+      },
+      description: "Props to pass to the group that wraps the model.",
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Basic: Story = {
-  args: {},
+  args: {
+    model_url: "./models/toaster.glb",
+    groupProps: {},
+  },
 };
