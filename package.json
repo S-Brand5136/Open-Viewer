@@ -1,7 +1,7 @@
 {
-  "name": "open-viewer",
+  "name": "@s-brand5163/open-viewer",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -46,5 +46,29 @@
     "storybook": "^7.6.8",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
-  }
+  },
+  "description": "A 3D Model Viewer component library built to make prototyping with react-three faster",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S-Brand5136/Open-Viewer.git"
+  },
+  "keywords": [
+    "threejs",
+    "react",
+    "library",
+    "open-source",
+    "react-three/fiber",
+    "react-three/drei"
+  ],
+  "author": "s-brand5163",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/S-Brand5136/Open-Viewer/issues"
+  },
+  "homepage": "https://github.com/S-Brand5136/Open-Viewer#readme"
 }
