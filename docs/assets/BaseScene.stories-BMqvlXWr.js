@@ -1,3 +1,0 @@
-import{j as c}from"./jsx-runtime-AgcCsxC8.js";import"./index-XiNr8FW2.js";import"./_commonjsHelpers-5-cIlDoe.js";const r=t=>c.jsx("div",{children:"BaseScene"});try{r.displayName="BaseScene",r.__docgenInfo={description:"",displayName:"BaseScene",props:{}}}catch{}const m={title:"Components/BaseScene",component:r,parameters:{layout:"fullscreen"},tags:["autodocs"],argTypes:{}},e={args:{}};var s,a,o;e.parameters={...e.parameters,docs:{...(s=e.parameters)==null?void 0:s.docs,source:{originalSource:`{
-  args: {}
-}`,...(o=(a=e.parameters)==null?void 0:a.docs)==null?void 0:o.source}}};const d=["Basic"];export{e as Basic,d as __namedExportsOrder,m as default};

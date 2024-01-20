@@ -1,3 +1,0 @@
-import{j as c}from"./jsx-runtime-AgcCsxC8.js";import"./index-XiNr8FW2.js";import"./_commonjsHelpers-5-cIlDoe.js";const s=a=>c.jsx("div",{children:"UseControls"});try{s.displayName="UseControls",s.__docgenInfo={description:"",displayName:"UseControls",props:{}}}catch{}const d={title:"Hooks/useControls",component:s,parameters:{layout:"fullscreen"},tags:["autodocs"],argTypes:{}},r={args:{}};var o,e,t;r.parameters={...r.parameters,docs:{...(o=r.parameters)==null?void 0:o.docs,source:{originalSource:`{
-  args: {}
-}`,...(t=(e=r.parameters)==null?void 0:e.docs)==null?void 0:t.source}}};const l=["Basic"];export{r as Basic,l as __namedExportsOrder,d as default};
