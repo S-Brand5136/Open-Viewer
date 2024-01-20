@@ -1,0 +1,10 @@
+.github/*
+.storybook/*
+.docs/*
+.public/*
+.test/*
+.storybook
+.docs
+.public
+.test
+.github
