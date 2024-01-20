@@ -2,7 +2,24 @@
 
 A 3D Model Viewer component library built to make prototyping with react-three faster
 
-### Getting Started
+## Story book documentation
+
+- View online documentation built with Storybook [here](https://s-brand5136.github.io/Open-Viewer/)
+
+
+### Getting Started: Install with npm
+
+
+- Install the package using NPM 
+
+- Link to [NPM Package](https://www.npmjs.com/package/@s-brand5163/open-viewer)
+
+```bash
+npm i @s-brand5163/open-viewer
+```
+
+
+### Getting Started: Dev Enviroment
 
 - Clone Project
 
@@ -53,10 +70,11 @@ Creates a Perspective Camera with Camera-Controls from Drei to give a basic cont
 ```ts
 type CameraControlsProps = {
     model: modelRefType; // required
-    sceneCanvas: sceneEleType, // required
+    sceneCanvas: sceneEleType; // required
     camera?: PerspectiveCamera | OrthographicCamera;
     domElement?: HTMLElement;
     cameraOrbit?: boolean;
+    cameraOrbitSpeed?: number;
     makeDefault?: boolean;
     disableZoom?: boolean;
     minZoom?: number;
@@ -70,7 +88,7 @@ type CameraControlsProps = {
 Default set up:
 
 ```jsx
-  <BaseControls
+  <Controls
       model={modelRef} // required
       sceneCanvas={sceneEle} // required
       disableZoom={disable_zoom}
@@ -88,9 +106,10 @@ Creates a 3D scene with a camera, lighting and controls to interact with the sce
 
 ```ts
     type Props = {
-      model_url: string; // required
+      model_url: string;
       camera_controls?: boolean;
       camera_orbit?: boolean;
+      camera_orbit_speed?: number;
       disable_zoom?: boolean;
       min_zoom?: number;
       max_zoom?: number;
